@@ -191,7 +191,7 @@ export default {
       /* The env dep is already installed. Use it to change the local ws URI */
       this.started = true
       this.$emit('runningSession', true)
-      this.socket = io(process.env.wsURI, { auth: { username: this.username } })
+      this.socket = io('https://api.laniakea.live', { auth: { username: this.username } })
       this.socket.emit('joinRoom', this.uniqueid)
       this.sendWS('join', { message: this.username + ' ' + this.$t('session.newParticipant') }, 'Info')
       this.socket.on('join', (data) => {

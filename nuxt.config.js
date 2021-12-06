@@ -40,7 +40,7 @@ export default {
     'nuxt-build-optimisations'
   ],
   strapi: {
-    url: process.env.API_STRAPI_ENDPOINT,
+    url: 'https://api.laniakea.live',
     key: 'authToken',
     expires: '7d',
     entities: ['tickets']
